@@ -24,17 +24,17 @@ tf.app.flags.DEFINE_string('train_dir', 'tf_train_breakout',
 tf.app.flags.DEFINE_string('restore_file_path',
                            'tf_train_breakout/breakout_model_20190814082641.h5',
                            """Path of the restore file """)
-tf.app.flags.DEFINE_integer('num_episode', 1000,
+tf.app.flags.DEFINE_integer('num_episode', 2000,
                             """number of epochs of the optimization loop.""")
-# tf.app.flags.DEFINE_integer('observe_step_num', 5000,
-tf.app.flags.DEFINE_integer('observe_step_num', 500,
+# tf.app.flags.DEFINE_integer('observe_step_num', 1000,
+tf.app.flags.DEFINE_integer('observe_step_num', 5000,
                             """Timesteps to observe before training.""")
-# tf.app.flags.DEFINE_integer('epsilon_step_num', 50000,
-tf.app.flags.DEFINE_integer('epsilon_step_num', 10000,
+# tf.app.flags.DEFINE_integer('epsilon_step_num', 10000,
+tf.app.flags.DEFINE_integer('epsilon_step_num', 50000,
                             """frames over which to anneal epsilon.""")
 tf.app.flags.DEFINE_integer('refresh_target_model_num', 200,  # update the target Q model every refresh_target_model_num
                             """frames over which to anneal epsilon.""")
-tf.app.flags.DEFINE_integer('replay_memory', 10000,  # takes up to 20 GB to store this amount of history data
+tf.app.flags.DEFINE_integer('replay_memory', 40000,  # takes up to 40 GB to store this amount of history data
                             """number of previous transitions to remember.""")
 tf.app.flags.DEFINE_integer('no_op_steps', 20,
                             """Number of the steps that runs before script begin.""")
